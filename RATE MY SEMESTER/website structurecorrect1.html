@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rate My Semester ✨</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="page-bg">
+  <div class="confetti-strip"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">📚 RateMySemester</div>
+      <div class="header-tags">
+        <span class="htag">🎓 Students</span>
+        <span class="htag">📊 Vibes</span>
+        <span class="htag">💡 Reflect</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-wrap">
+
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="hero-badge">✨ Semester Recap</div>
+      <h1 class="hero-title">Rate My Semester</h1>
+      <p class="hero-sub">Honest reviews only. How did it <em>actually</em> go?</p>
+      <div class="hero-pills">
+        <span class="pill pill-purple">🎓 Academic</span>
+        <span class="pill pill-teal">🌿 Wellbeing</span>
+        <span class="pill pill-coral">🔥 Social</span>
+        <span class="pill pill-pink">💖 Balance</span>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <div class="pin-grid" id="formSection">
+
+      <!-- CARD 1: BASICS -->
+      <div class="pin-card card-purple">
+        <div class="pin-card-header">
+          <span class="pin-icon">👤</span>
+          <span class="pin-card-title">The Basics</span>
+        </div>
+        <div class="field">
+          <label>Your name or alias</label>
+          <input type="text" id="name" placeholder="e.g. Sleep-deprived student" />
+        </div>
+        <div class="field">
+          <label>Semester & year</label>
+          <select id="semester">
+            <option value="">-- Select --</option>
+            <option>Spring 2025</option>
+            <option>Fall 2025</option>
+            <option>Spring 2026</option>
+            <option>Summer 2026</option>
+            <option>Fall 2026</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Your major / field</label>
+          <input type="text" id="major" placeholder="e.g. Computer Science" />
+        </div>
+        <div class="field">
+          <label>University / College</label>
+          <input type="text" id="university" placeholder="e.g. MIT, Local Community College" />
+        </div>
+        <div class="field">
+          <label>Number of courses taken</label>
+          <input type="number" id="courses" min="1" max="12" placeholder="e.g. 5" />
+        </div>
+      </div>
+
+      <!-- CARD 2: STAR RATINGS -->
+      <div class="pin-card card-teal">
+        <div class="pin-card-header">
+          <span class="pin-icon">⭐</span>
+          <span class="pin-card-title">Star Ratings</span>
+        </div>
+        <div class="field">
+          <label>Academic performance</label>
+          <div class="stars-row">
+            <input type="radio" name="academic" id="a1" value="1"><label for="a1">★</label>
+            <input type="radio" name="academic" id="a2" value="2"><label for="a2">★</label>
+            <input type="radio" name="academic" id="a3" value="3"><label for="a3">★</label>
+            <input type="radio" name="academic" id="a4" value="4"><label for="a4">★</label>
+            <input type="radio" name="academic" id="a5" value="5"><label for="a5">★</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Social life</label>
+          <div class="stars-row">
+            <input type="radio" name="social" id="s1" value="1"><label for="s1">★</label>
+            <input type="radio" name="social" id="s2" value="2"><label for="s2">★</label>
+            <input type="radio" name="social" id="s3" value="3"><label for="s3">★</label>
+            <input type="radio" name="social" id="s4" value="4"><label for="s4">★</label>
+            <input type="radio" name="social" id="s5" value="5"><label for="s5">★</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Mental health & wellbeing</label>
+          <div class="stars-row">
+            <input type="radio" name="mental" id="m1" value="1"><label for="m1">★</label>
+            <input type="radio" name="mental" id="m2" value="2"><label for="m2">★</label>
+            <input type="radio" name="mental" id="m3" value="3"><label for="m3">★</label>
+            <input type="radio" name="mental" id="m4" value="4"><label for="m4">★</label>
+            <input type="radio" name="mental" id="m5" value="5"><label for="m5">★</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Work / life balance</label>
+          <div class="stars-row">
+            <input type="radio" name="balance" id="b1" value="1"><label for="b1">★</label>
+            <input type="radio" name="balance" id="b2" value="2"><label for="b2">★</label>
+            <input type="radio" name="balance" id="b3" value="3"><label for="b3">★</label>
+            <input type="radio" name="balance" id="b4" value="4"><label for="b4">★</label>
+            <input type="radio" name="balance" id="b5" value="5"><label for="b5">★</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Professor quality</label>
+          <div class="stars-row">
+            <input type="radio" name="prof" id="p1" value="1"><label for="p1">★</label>
+            <input type="radio" name="prof" id="p2" value="2"><label for="p2">★</label>
+            <input type="radio" name="prof" id="p3" value="3"><label for="p3">★</label>
+            <input type="radio" name="prof" id="p4" value="4"><label for="p4">★</label>
+            <input type="radio" name="prof" id="p5" value="5"><label for="p5">★</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: NUMBERS -->
+      <div class="pin-card card-coral">
+        <div class="pin-card-header">
+          <span class="pin-icon">🎚️</span>
+          <span class="pin-card-title">The Numbers</span>
+        </div>
+        <div class="field">
+          <label>All-nighters pulled</label>
+          <div class="slider-row">
+            <input type="range" min="0" max="20" value="0" step="1" id="allnighters"
+              oninput="document.getElementById('an-val').textContent=this.value" />
+            <span class="slider-val" id="an-val">0</span>
+          </div>
+        </div>
+        <div class="field">
+          <label>Average sleep per night</label>
+          <div class="slider-row">
+            <input type="range" min="2" max="12" value="7" step="1" id="sleep"
+              oninput="document.getElementById('sl-val').textContent=this.value+'h'" />
+            <span class="slider-val" id="sl-val">7h</span>
+          </div>
+        </div>
+        <div class="field">
+          <label>Syllabus actually read</label>
+          <div class="slider-row">
+            <input type="range" min="0" max="100" value="50" step="1" id="syllabus"
+              oninput="document.getElementById('sy-val').textContent=this.value+'%'" />
+            <span class="slider-val" id="sy-val">50%</span>
+          </div>
+        </div>
+        <div class="field">
+          <label>Classes attended</label>
+          <div class="slider-row">
+            <input type="range" min="0" max="100" value="80" step="1" id="attendance"
+              oninput="document.getElementById('at-val').textContent=this.value+'%'" />
+            <span class="slider-val" id="at-val">80%</span>
+          </div>
+        </div>
+        <div class="field">
+          <label>Assignments submitted on time</label>
+          <div class="slider-row">
+            <input type="range" min="0" max="100" value="70" step="1" id="ontime"
+              oninput="document.getElementById('ot-val').textContent=this.value+'%'" />
+            <span class="slider-val" id="ot-val">70%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4: MOOD -->
+      <div class="pin-card card-pink">
+        <div class="pin-card-header">
+          <span class="pin-icon">🌈</span>
+          <span class="pin-card-title">Mood Check</span>
+        </div>
+        <div class="field">
+          <label>How did this semester leave you feeling?</label>
+          <div class="mood-grid">
+            <button type="button" class="mood-btn" onclick="selectMood(this,'Relieved')">😮‍💨 Relieved</button>
+            <button type="button" class="mood-btn" onclick="selectMood(this,'Proud')">🏅 Proud</button>
+            <button type="button" class="mood-btn" onclick="selectMood(this,'Burnt out')">🔥 Burnt out</button>
+            <button type="button" class="mood-btn" onclick="selectMood(this,'Inspired')">💡 Inspired</button>
+            <button type="button" class="mood-btn" onclick="selectMood(this,'Meh')">😐 Meh</button>
+            <button type="button" class="mood-btn" onclick="selectMood(this,'Chaotic')">🌀 Chaotic</button>
+            <button type="button" class="mood-btn" onclick="selectMood(this,'Hopeful')">🌱 Hopeful</button>
+            <button type="button" class="mood-btn" onclick="selectMood(this,'Done forever')">✌️ Done forever</button>
+          </div>
+        </div>
+        <div class="field" style="margin-top:1rem;">
+          <label>Overall semester colour (pick one)</label>
+          <div class="color-picker-row">
+            <span class="cp-dot" style="background:#7c3aed" data-color="Purple" onclick="selectColor(this)" title="Purple"></span>
+            <span class="cp-dot" style="background:#059669" data-color="Teal" onclick="selectColor(this)" title="Teal"></span>
+            <span class="cp-dot" style="background:#ea580c" data-color="Coral" onclick="selectColor(this)" title="Coral"></span>
+            <span class="cp-dot" style="background:#db2777" data-color="Pink" onclick="selectColor(this)" title="Pink"></span>
+            <span class="cp-dot" style="background:#d97706" data-color="Amber" onclick="selectColor(this)" title="Amber"></span>
+            <span class="cp-dot" style="background:#2563eb" data-color="Blue" onclick="selectColor(this)" title="Blue"></span>
+            <span class="cp-dot" style="background:#16a34a" data-color="Green" onclick="selectColor(this)" title="Green"></span>
+          </div>
+        </div>
+        <div class="field" style="margin-top:1rem;">
+          <label>Stress level (1 = chill 😎, 10 = 💀)</label>
+          <div class="slider-row">
+            <input type="range" min="1" max="10" value="5" step="1" id="stress"
+              oninput="updateStress(this.value)" />
+            <span class="slider-val" id="st-val">5</span>
+          </div>
+          <div class="stress-bar-wrap">
+            <div class="stress-bar" id="stressBar" style="width:44%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5: HIGHLIGHTS -->
+      <div class="pin-card card-amber">
+        <div class="pin-card-header">
+          <span class="pin-icon">✍️</span>
+          <span class="pin-card-title">Highlights & Lowlights</span>
+        </div>
+        <div class="field">
+          <label>Best moment of the semester 🌟</label>
+          <textarea id="best" placeholder="e.g. Aced that final I barely studied for..."></textarea>
+        </div>
+        <div class="field">
+          <label>Worst moment 😬</label>
+          <textarea id="worst" placeholder="e.g. Group project where only I did the work..."></textarea>
+        </div>
+        <div class="field">
+          <label>One thing you'd do differently 🔄</label>
+          <textarea id="differently" placeholder="e.g. Start assignments before midnight..."></textarea>
+        </div>
+        <div class="field">
+          <label>Favourite course this semester 💚</label>
+          <input type="text" id="favCourse" placeholder="e.g. Intro to Machine Learning" />
+        </div>
+        <div class="field">
+          <label>Most useless course (be honest 😅)</label>
+          <input type="text" id="worstCourse" placeholder="e.g. Mandatory PE Credit" />
+        </div>
+      </div>
+
+      <!-- CARD 6: TAGS -->
+      <div class="pin-card card-blue">
+        <div class="pin-card-header">
+          <span class="pin-icon">🏷️</span>
+          <span class="pin-card-title">Semester Tags</span>
+        </div>
+        <div class="field">
+          <label>Pick all that apply</label>
+          <div class="tag-grid">
+            <span class="tag" onclick="toggleTag(this)">😤 Survived</span>
+            <span class="tag" onclick="toggleTag(this)">🌟 Thrived</span>
+            <span class="tag" onclick="toggleTag(this)">😭 Cried</span>
+            <span class="tag" onclick="toggleTag(this)">📱 Procrastinated</span>
+            <span class="tag" onclick="toggleTag(this)">😴 Napped</span>
+            <span class="tag" onclick="toggleTag(this)">🏋️ Overloaded</span>
+            <span class="tag" onclick="toggleTag(this)">🤝 Made friends</span>
+            <span class="tag" onclick="toggleTag(this)">💔 Lost friends</span>
+            <span class="tag" onclick="toggleTag(this)">🎨 New passion</span>
+            <span class="tag" onclick="toggleTag(this)">🎉 Had fun</span>
+            <span class="tag" onclick="toggleTag(this)">💸 Broke</span>
+            <span class="tag" onclick="toggleTag(this)">⬆️ Levelled up</span>
+            <span class="tag" onclick="toggleTag(this)">☕ Caffeine dependent</span>
+            <span class="tag" onclick="toggleTag(this)">📚 Actually studied</span>
+            <span class="tag" onclick="toggleTag(this)">🏠 Never left home</span>
+          </div>
+        </div>
+        <div class="field" style="margin-top:1rem;">
+          <label>Anything else? (free note) 💬</label>
+          <textarea id="note" placeholder="Final thoughts, confessions, rants..."></textarea>
+        </div>
+      </div>
+
+    </div><!-- end pin-grid -->
+
+    <div class="submit-wrap">
+      <button class="submit-btn" onclick="submitForm()">🎓 Submit My Semester</button>
+    </div>
+
+  </main>
+
+  <!-- RESULT SECTION -->
+  <div class="result-section" id="resultSection" style="display:none;">
+    <div class="result-card">
+      <div class="result-emoji" id="resultEmoji">🎉</div>
+      <h2 class="result-title" id="resultTitle">Your verdict is in!</h2>
+      <p class="result-sub" id="resultSub">Here's how your semester stacked up.</p>
+      <div class="score-area">
+        <div class="score-label-row">
+          <span>Overall score</span>
+          <span class="score-num" id="scoreNum">0/10</span>
+        </div>
+        <div class="score-bar-wrap">
+          <div class="score-bar" id="scoreBar" style="width:0%"></div>
+        </div>
+      </div>
+      <div class="mini-grid" id="miniScores"></div>
+      <div class="summary-box" id="summaryBox"></div>
+      <button class="reset-btn" onclick="resetForm()">🔄 Rate another semester</button>
+    </div>
+  </div>
+
+</div><!-- end page-bg -->
+
+<script src="script.js"></script>
+</body>
+</html>
